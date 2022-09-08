@@ -19,8 +19,7 @@
 }
 
 header {
-  max-width: 35.625em;
-  min-width: 22.625em;
+  width: 100%;
   padding-inline: 2em;
   margin: auto;
   margin-block: 4em 3em;
@@ -30,10 +29,16 @@ header {
     padding-inline: 1em;
   }
 }
+header .ab {
+  max-width: 35.625em;
+  min-width: 22.625em;
+  margin-inline: auto;
+}
 header h1 {
   text-align: center;
   color: var(--very-dark-blue);
   font-size: 2rem;
+  min-width: 13.625em !important;
 }
 header h1 span {
   font-weight: 200;
