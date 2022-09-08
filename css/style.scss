@@ -108,7 +108,8 @@ main {
         .line__4 {
             background-color: var(--blue);
         }
-        > section {
+        > div {
+           &:last-child{
             padding: 2em;
             justify-content: space-between;
             h2 {
@@ -124,6 +125,7 @@ main {
                 margin-left: auto;
                 left: 80%;
             }
+           }
         }
     }
     .card__1 {

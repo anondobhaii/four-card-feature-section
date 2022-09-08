@@ -82,8 +82,6 @@ main {
 }
 main .card {
   width: 22em;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   border-radius: 1em;
   position: relative;
@@ -108,18 +106,18 @@ main .card .line__3 {
 main .card .line__4 {
   background-color: var(--blue);
 }
-main .card > section {
+main .card > div:last-child {
   padding: 2em;
   justify-content: space-between;
 }
-main .card > section h2 {
+main .card > div:last-child h2 {
   color: var(--very-dark-blue);
 }
-main .card > section p {
+main .card > div:last-child p {
   color: var(--grayish-blue);
   font-size: 0.8em;
 }
-main .card > section img {
+main .card > div:last-child img {
   position: relative;
   margin-top: 1em;
   margin-left: auto;
@@ -138,4 +136,4 @@ main .card__3 {
 main .card__4 {
   grid-area: d;
   margin-block: auto;
-}/*# sourceMappingURL=style.css.map */
+}
