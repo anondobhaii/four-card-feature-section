@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 45%;
+  margin: auto;
+  margin-block: 4em 3em;
+}
+header h1 {
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+header h1 span {
+  font-weight: 200;
+}
+header p {
+  margin-top: 1em;
+  color: var(--grayish-blue);
+  word-wrap: break-word;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a b d" "a c d";
+  margin: auto;
+}
+main .card {
+  width: 22em;
+  height: max-content;
+  border-radius: 1em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-25%);
+  overflow: hidden;
+  box-shadow: 0 10px 20px hsla(234deg, 12%, 34%, 0.2);
+}
+main .card .line {
+  width: 100%;
+  height: 0.3em;
+}
+main .card .line__1 {
+  background-color: var(--cyan);
+}
+main .card .line__2 {
+  background-color: var(--red);
+}
+main .card .line__3 {
+  background-color: var(--orange);
+}
+main .card .line__4 {
+  background-color: var(--blue);
+}
+main .card > section {
+  padding: 2em;
+  justify-content: space-between;
+}
+main .card > section h2 {
+  color: var(--very-dark-blue);
+}
+main .card > section p {
+  color: var(--grayish-blue);
+  font-size: 0.8em;
+}
+main .card > section img {
+  margin-top: 4em;
+  margin-left: auto;
+}
+main .card__1 {
+  grid-area: a;
+  margin-block: auto;
+}
+main .card__2 {
+  grid-area: b;
+}
+main .card__3 {
+  grid-area: c;
+}
+main .card__4 {
+  grid-area: d;
+  margin-block: auto;
+}
