@@ -9,7 +9,9 @@
   --very-light-gray: hsl(0, 0%, 98%);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,9 +19,16 @@
 }
 
 header {
-  width: 45%;
+  max-width: 35.625em;
+  min-width: 22.625em;
+  padding-inline: 2em;
   margin: auto;
   margin-block: 4em 3em;
+}
+@media (max-width: 800px) {
+  header {
+    padding-inline: 1em;
+  }
 }
 header h1 {
   text-align: center;
@@ -27,6 +36,11 @@ header h1 {
 }
 header h1 span {
   font-weight: 200;
+}
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 1.5em;
+  }
 }
 header p {
   margin-top: 1em;
@@ -36,19 +50,38 @@ header p {
 }
 
 main {
+  width: 100%;
   display: grid;
+  padding-inline: 2em;
   gap: 2em;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "a b d" "a c d";
-  margin: auto;
+  margin-inline: auto;
+  margin-bottom: 4em;
+}
+@media (max-width: 1200px) {
+  main {
+    padding-inline: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b" "c d";
+  }
+}
+@media (max-width: 800px) {
+  main {
+    padding-inline: 0.5em;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "a" "b" "c" "d";
+  }
 }
 main .card {
   width: 22em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   border-radius: 1em;
   position: relative;
   left: 50%;
-  transform: translateX(-25%);
+  transform: translateX(-50%);
   overflow: hidden;
   box-shadow: 0 10px 20px hsla(234deg, 12%, 34%, 0.2);
 }
@@ -80,8 +113,10 @@ main .card > section p {
   font-size: 0.8em;
 }
 main .card > section img {
-  margin-top: 4em;
+  position: relative;
+  margin-top: 1em;
   margin-left: auto;
+  left: 80%;
 }
 main .card__1 {
   grid-area: a;
@@ -96,4 +131,4 @@ main .card__3 {
 main .card__4 {
   grid-area: d;
   margin-block: auto;
-}
+}/*# sourceMappingURL=style.css.map */
