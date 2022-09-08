@@ -23,7 +23,7 @@
 }
 
 header {
-    width: 100%;
+    max-width: 75em;
     padding-inline: 2em;
     margin: auto;
     margin-block: 4em 3em;
@@ -56,7 +56,7 @@ header {
     }
 }
 main {
-    width: 100%;
+    max-width: 75em;
     display: grid;
     padding-inline: 2em;
     gap: 2em;
